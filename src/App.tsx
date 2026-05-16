@@ -3,13 +3,14 @@ import { AnimatePresence, motion } from 'motion/react';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
+import NotFound from './components/NotFound';
 import { products } from './data';
 
 export default function App() {
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
 
   const selectedProduct = useMemo(() => 
-    products.find(p => p.id === selectedProductId), 
+    selectedProductId ? products.find(p => p.id === selectedProductId) : null, 
     [selectedProductId]
   );
 
@@ -45,7 +46,16 @@ export default function App() {
                 onBack={() => setSelectedProductId(null)} 
               />
             </motion.div>
-          ) : null}
+          ) : (
+            <motion.div
+              key="404"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <NotFound onHome={() => setSelectedProductId(null)} />
+            </motion.div>
+          )}
         </AnimatePresence>
       </main>
 
