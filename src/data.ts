@@ -10,7 +10,7 @@ export const products: Product[] = [
     oldPrice: 1056.00,
     rating: 5.0,
     reviews: 124,
-    image: '/coffee-machine.jpeg',
+    image: 'coffee-machine.jpeg',
     badge: 'Sale 15%',
     description: 'A stylish and compact coffee machine that brings the Italian cafe experience to your home. Featuring the iconic retro design of the 50s.',
     features: [
@@ -29,7 +29,7 @@ export const products: Product[] = [
     price: 1130.00,
     rating: 4.8,
     reviews: 3502,
-    image: '/iphone.jpeg',
+    image: 'iphone.jpeg',
     description: 'The latest iPhone with a desert titanium finish, featuring the advanced A18 Pro chip and a stunning pro camera system.',
     features: [
       '6.3-inch Super Retina XDR display',
@@ -47,7 +47,7 @@ export const products: Product[] = [
     price: 129.00,
     rating: 4.9,
     reviews: 89,
-    image: '/microwave.jpeg',
+    image: 'microwave.jpeg',
     description: 'A powerful and efficient microwave oven with a sleek minimalist design, perfect for modern kitchens.',
     features: [
       '800W microwave power',
@@ -65,8 +65,8 @@ export const products: Product[] = [
     price: 449.00,
     rating: 4.2,
     reviews: 12384,
-    image: '/earbuds-main.jpeg',
-    images: ['/earbuds-main.jpeg', '/earbuds-2.jpeg'],
+    image: 'earbuds-main.jpeg',
+    images: ['earbuds-main.jpeg', 'earbuds-2.jpeg'],
     badge: 'Trending',
     description: 'With Bose Immersive Audio — breakthrough spatialised audio makes your music feel more real — no matter the content or streaming source.',
     features: [
@@ -86,7 +86,7 @@ export const products: Product[] = [
     oldPrice: 180.00,
     rating: 4.7,
     reviews: 215,
-    image: '/kettle.jpeg',
+    image: 'kettle.jpeg',
     badge: 'Sale 10%',
     description: 'Experience pure elegance and efficiency with the 50s-style retro electric kettle.',
     features: [
@@ -106,7 +106,7 @@ export const products: Product[] = [
     oldPrice: 299.00,
     rating: 4.6,
     reviews: 56,
-    image: '/steamer.jpeg',
+    image: 'steamer.jpeg',
     badge: 'Sale 15%',
     description: 'Professional-grade hair dryer with ion technology for smooth, shiny results every time.',
     features: [
@@ -125,7 +125,7 @@ export const products: Product[] = [
     price: 399.00,
     rating: 4.9,
     reviews: 842,
-    image: '/headphones.jpeg',
+    image: 'headphones.jpeg',
     description: 'High-fidelity audio meets industry-leading noise cancellation for an unparalleled listening experience.',
     features: [
       'Customizable EQ',
@@ -143,7 +143,7 @@ export const products: Product[] = [
     price: 1250.00,
     rating: 5.0,
     reviews: 42,
-    image: '/tv.png',
+    image: 'tv.png',
     description: 'A masterpiece of design combining 70s aesthetics with modern 4K technology. Encased in genuine walnut wood.',
     features: [
       'Genuine walnut wooden frame',
@@ -161,7 +161,7 @@ export const products: Product[] = [
     price: 89.00,
     rating: 4.7,
     reviews: 1205,
-    image: '/remote.png',
+    image: 'remote.png',
     description: 'The ultimate minimalist control experience. Universal compatibility with ultra-low latency.',
     features: [
       'Touch-sensitive trackpad',
@@ -179,8 +179,8 @@ export const products: Product[] = [
     price: 849.00,
     rating: 4.8,
     reviews: 642,
-    image: '/ac.png',
-    images: ['/ac.png', '/ac2.jpeg', '/ac3.jpeg'],
+    image: 'ac.png',
+    images: ['ac.png', 'ac2.jpeg', 'ac3.jpeg'],
     badge: 'Trending',
     description: 'Ultra-quiet, energy-efficient smart air conditioner with AI-powered temperature regulation.',
     features: [
