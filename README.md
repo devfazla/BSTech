@@ -1,33 +1,49 @@
 # BSTech Electronics
 
-A sleek, high-tech electronics store featuring an ultra-modern dark interface, neon accents, and a curated selection of premium gadgets.
+BSTech is a sleek, ultra-modern electronics e-commerce platform. It features a high-contrast dark interface with vibrant neon accents, designed to provide a premium shopping experience for high-tech enthusiasts.
 
 ![App Screenshot](public/earbuds-main.jpeg)
 
-## 🚀 Features
+## ✨ Core Features
 
-- **Modern Dark UI**: Designed with a high-contrast dark theme and neon highlights.
-- **Dynamic Catalog**: Browse through categories like Smartphones, Kitchen, Home Comfort, and TV & Video.
-- **Product Details**: Immersive product pages with image galleries, feature lists, and color selection.
-- **Filtering System**: Filter products by category and brand with a real-time reactive interface.
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices.
-- **Smooth Animations**: Powered by `motion` for fluid state transitions.
+- **Modern Dark Aesthetic**: A custom-designed dark theme with CSS variables and Tailwind CSS 4.
+- **Dynamic Trending Page**: Replaces traditional "Bestsellers" with a curated "Trending" selection.
+- **Advanced Filtering**: Sidebar with real-time filtering by brand and category.
+- **Comprehensive Product Catalog**:
+  - **Smartphones**: Latest mobile devices including the iPhone 16 Pro.
+  - **TV & Video**: Premium displays like the "Vintage Master TV" and specialized "Precision Remotes".
+  - **Home Comfort**: Smart appliances including the Smart Air Conditioner.
+  - **Kitchen**: High-end retro appliances by SMEG.
+  - **Audio**: World-class audio gear from Bose.
+- **Interactive Product Details**: 
+  - Staggered image galleries for multiple product views.
+  - Feature lists and technical specifications.
+  - Color variation selection.
+  - "Trending" and "Sale" badges.
+- **Fluid UI Transitions**: Smooth route-like transitions between the catalog and product detail views using `motion`.
 
-## 🛠️ Built With
+## 🛠️ Technology Stack
 
-- **React 19**: Modern UI development with functional components.
-- **TypeScript**: Type-safe development for robustness.
-- **Tailwind CSS 4**: Utility-first styling with the latest features.
-- **Motion**: High-performance layout and UI animations.
-- **Lucide React**: Clean and consistent iconography.
-- **Vite**: Ultra-fast build tool and development server.
+- **Framework**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Motion](https://motion.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Build Tool**: [Vite 6](https://vitejs.dev/)
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
 
-## 📦 Getting Started
+## 📁 Project Structure
 
-### Prerequisites
+- `src/components/`: Reusable UI components.
+  - `Header.tsx`: Navigation bar with catalog and user controls.
+  - `Sidebar.tsx`: Filter panel for brands and price ranges.
+  - `ProductCard.tsx`: Grid item view for products.
+  - `ProductList.tsx`: Main catalog container.
+  - `ProductDetail.tsx`: Immersive single-product view.
+- `src/data.ts`: Centralized product database with high-resolution local assets.
+- `src/types.ts`: TypeScript interfaces for global consistency.
+- `public/`: High-resolution product imagery.
 
-- Node.js (v18 or higher)
-- npm or yarn
+## 🚀 Getting Started
 
 ### Installation
 
@@ -46,16 +62,13 @@ A sleek, high-tech electronics store featuring an ultra-modern dark interface, n
    npm run dev
    ```
 
-## 🚢 Deployment
+### 🚢 Deployment
 
-### GitHub Pages
+The project is pre-configured for **GitHub Pages**. 
 
-This project is configured for GitHub Pages. 
-
-1. Ensure the `base` property in `vite.config.ts` matches your repository name if not using a custom domain.
-2. Push your code to GitHub.
-3. The included GitHub Action (`.github/workflows/deploy.yml`) will automatically build and deploy the app to the `gh-pages` branch.
+1. The `.github/workflows/deploy.yml` handles automated deployment on every push to the `main` branch.
+2. `vite.config.ts` uses `base: './'` to ensure asset paths resolve correctly on sub-paths.
 
 ## 📄 License
 
-This project is licensed under the Apache-2.0 License.
+Licensed under the Apache-2.0 License.
