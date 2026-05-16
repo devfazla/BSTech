@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: string;
+  category: Category;
   price: number;
   oldPrice?: number;
   rating: number;
@@ -15,4 +15,8 @@ export interface Product {
   colors: string[];
 }
 
-export type Category = 'All items' | 'Smartphones' | 'Kitchen' | 'Game Console' | 'TV & Video' | 'Home Comfort';
+export interface CartItem extends Product {
+  quantity: number;
+}
+
+export type Category = 'All items' | 'Smartphones' | 'Kitchen' | 'Game Console' | 'TV & Video' | 'Home Comfort' | 'Favorites' | 'Sale';

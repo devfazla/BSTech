@@ -4,19 +4,23 @@ import Header from './components/Header';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import NotFound from './components/NotFound';
-import { products } from './data';
+import CartDrawer from './components/CartDrawer';
+import { useShop } from './ShopContext';
 
 export default function App() {
+  const { products } = useShop();
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const selectedProduct = useMemo(() => 
     selectedProductId ? products.find(p => p.id === selectedProductId) : null, 
-    [selectedProductId]
+    [selectedProductId, products]
   );
 
   return (
     <div id="app-root" className="min-h-screen bg-dark-bg text-white selection:bg-neon selection:text-dark-bg">
-      <Header />
+      <Header onOpenCart={() => setIsCartOpen(true)} />
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
       
       <main className="pt-20">
         <AnimatePresence mode="wait">
@@ -29,7 +33,6 @@ export default function App() {
               transition={{ duration: 0.3 }}
             >
               <ProductList 
-                products={products} 
                 onProductClick={setSelectedProductId} 
               />
             </motion.div>
