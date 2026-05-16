@@ -6,6 +6,7 @@ import { useShop } from '../ShopContext';
 interface ProductCardProps {
   product: Product;
   onClick: (id: string) => void;
+  key?: string | number;
 }
 
 export default function ProductCard({ product, onClick }: ProductCardProps) {

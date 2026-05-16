@@ -5,11 +5,11 @@ import { useState } from 'react';
 
 interface HeaderProps {
   onOpenCart: () => void;
+  onOpenWishlist: () => void;
 }
 
-export default function Header({ onOpenCart }: HeaderProps) {
+export default function Header({ onOpenCart, onOpenWishlist }: HeaderProps) {
   const { cart, favorites, searchQuery, setSearchQuery, setSelectedCategory } = useShop();
-  const [isSearchVisible, setIsSearchVisible] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-white/5">
@@ -17,33 +17,11 @@ export default function Header({ onOpenCart }: HeaderProps) {
         <div className="flex items-center gap-12 shrink-0">
           <a 
             href="/" 
-            onClick={(e) => { e.preventDefault(); setSelectedCategory('All items'); }}
+            onClick={(e) => { e.preventDefault(); setSelectedCategory('All items'); window.location.hash = ''; }}
             className="text-2xl font-bold font-tech tracking-tighter"
           >
             BSTech
           </a>
-          
-          <nav className="hidden lg:flex items-center gap-8">
-            <button 
-              onClick={() => setSelectedCategory('Trending' as any)}
-              className="text-sm font-medium text-neon hover:opacity-80 transition-opacity"
-            >
-              Trending
-            </button>
-            <button 
-              onClick={() => setSelectedCategory('Sale')}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors"
-            >
-              Sale
-            </button>
-            <button 
-              onClick={() => setSelectedCategory('Favorites')}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <Heart size={14} className={favorites.length > 0 ? "fill-red-500 text-red-500" : ""} />
-              Favorites
-            </button>
-          </nav>
         </div>
 
         {/* Global Search */}
@@ -61,6 +39,18 @@ export default function Header({ onOpenCart }: HeaderProps) {
         </div>
 
         <div className="flex items-center gap-2 md:gap-6 shrink-0">
+          <button 
+            onClick={onOpenWishlist}
+            className="relative p-2 text-white/60 hover:text-red-500 transition-colors"
+          >
+            <Heart size={22} className={favorites.length > 0 ? "fill-red-500 text-red-500" : ""} />
+            {favorites.length > 0 && (
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                {favorites.length}
+              </span>
+            )}
+          </button>
+
           <button 
             onClick={onOpenCart}
             className="relative flex items-center gap-2 p-2 text-white/60 hover:text-white transition-colors"

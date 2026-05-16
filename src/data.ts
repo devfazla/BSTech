@@ -19,7 +19,17 @@ export const products: Product[] = [
       'Adjustable cappuccino system',
       'Removable water tank (1L)'
     ],
-    colors: ['#FFFFFF', '#000000', '#FF0000', '#ADD8E6']
+    colors: ['#FFFFFF', '#000000', '#FF0000', '#ADD8E6'],
+    specifications: [
+      { label: 'Power', value: '1350 W' },
+      { label: 'Voltage', value: '220-240 V' },
+      { label: 'Frequency', value: '50/60 Hz' },
+      { label: 'Dimensions', value: '149 x 330 x 303 mm' }
+    ],
+    userReviews: [
+      { id: 'r1', user: 'Marco Rossi', rating: 5, comment: 'Exceptional build quality and the espresso is perfect.', date: '2024-03-12', avatar: 'https://i.pravatar.cc/150?u=marco' },
+      { id: 'r2', user: 'Sarah Jenkins', rating: 5, comment: 'Beautiful addition to my kitchen. Worth every penny.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=sarah' }
+    ]
   },
   {
     id: '2',
@@ -37,7 +47,17 @@ export const products: Product[] = [
       '4K 120 fps Dolby Vision',
       'A18 Pro chip with 6-core GPU'
     ],
-    colors: ['#4B4B4B', '#F5F5F0', '#C5C5C5', '#3D3D3D']
+    colors: ['#4B4B4B', '#F5F5F0', '#C5C5C5', '#3D3D3D'],
+    specifications: [
+      { label: 'Display', value: '6.3" LTPO Super Retina XDR' },
+      { label: 'Processor', value: 'A18 Pro chip' },
+      { label: 'Camera', value: '48MP Main | 12MP Ultra Wide' },
+      { label: 'Battery', value: 'Up to 27 hours video playback' }
+    ],
+    userReviews: [
+      { id: 'r3', user: 'TechGuru', rating: 5, comment: 'The camera upgrades are insane. Best phone of the year.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=tech' },
+      { id: 'r4', user: 'Liam O.', rating: 4, comment: 'Great performance, though battery life could be better.', date: '2024-03-14', avatar: 'https://i.pravatar.cc/150?u=liam' }
+    ]
   },
   {
     id: '3',
@@ -55,7 +75,16 @@ export const products: Product[] = [
       'Defrost by time or weight',
       'Electronic timer'
     ],
-    colors: ['#000000', '#808080', '#FFFFFF']
+    colors: ['#000000', '#808080', '#FFFFFF'],
+    specifications: [
+      { label: 'Type', value: 'Compact Microwave' },
+      { label: 'Capacity', value: '25 Litres' },
+      { label: 'Control', value: 'Electronic' },
+      { label: 'Material', value: 'Sheet metal' }
+    ],
+    userReviews: [
+      { id: 'r5', user: 'Emily White', rating: 5, comment: 'Looks amazing and heats food very evenly.', date: '2024-02-28', avatar: 'https://i.pravatar.cc/150?u=emily' }
+    ]
   },
   {
     id: '4',
@@ -75,7 +104,16 @@ export const products: Product[] = [
       'Up to 6-hours or 24 hours total with case',
       'CustomTune technology for personalised sound'
     ],
-    colors: ['#2E4A7D', '#FFFFFF', '#D4FF00', '#3D3D3D', '#F5F5DC']
+    colors: ['#2E4A7D', '#FFFFFF', '#D4FF00', '#3D3D3D', '#F5F5DC'],
+    specifications: [
+      { label: 'Wireless Range', value: 'Up to 30 ft (9 m)' },
+      { label: 'Bluetooth Version', value: '5.3' },
+      { label: 'Battery Life', value: 'Up to 6 hours' },
+      { label: 'Charging Case', value: 'USB-C / Wireless' }
+    ],
+    userReviews: [
+      { id: 'r6', user: 'AudiophileX', rating: 4, comment: 'ANC is second to none. Soundstage is impressive.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=audio' }
+    ]
   },
   {
     id: '5',
@@ -95,7 +133,15 @@ export const products: Product[] = [
       'Auto shut-off at 100°C',
       'Soft-opening lid'
     ],
-    colors: ['#000000', '#FF0000', '#F5F5DC']
+    colors: ['#000000', '#FF0000', '#F5F5DC'],
+    specifications: [
+      { label: 'Dimensions', value: '248 x 226 x 171 mm' },
+      { label: 'Body material', value: 'Stainless steel' },
+      { label: 'Internal volume', value: '1.7 Litres' }
+    ],
+    userReviews: [
+      { id: 'r7', user: 'Jane Smith', rating: 5, comment: 'Heats up fast and looks beautiful on my counter.', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=jane' }
+    ]
   },
   {
     id: '6',
@@ -115,7 +161,15 @@ export const products: Product[] = [
       '3 heat and 2 speed settings',
       'Cool shot button'
     ],
-    colors: ['#3D3C3A', '#808080']
+    colors: ['#3D3C3A', '#808080'],
+    specifications: [
+      { label: 'Motor speed', value: '110,000 RPM' },
+      { label: 'Cord Length', value: '3 Metres' },
+      { label: 'Weight', value: '450g' }
+    ],
+    userReviews: [
+      { id: 'r8', user: 'Stylist88', rating: 4, comment: 'Very light and dries hair in half the time.', date: '2024-01-15', avatar: 'https://i.pravatar.cc/150?u=stylist' }
+    ]
   },
   {
     id: '7',
@@ -133,7 +187,15 @@ export const products: Product[] = [
       'Up to 30 hours battery life',
       'Fast charging'
     ],
-    colors: ['#000000', '#FFFFFF', '#808080']
+    colors: ['#000000', '#FFFFFF', '#808080'],
+    specifications: [
+      { label: 'Driver Type', value: 'Dynamic' },
+      { label: 'Noise Cancelling', value: 'Active' },
+      { label: 'Battery Life', value: '30 Hours' }
+    ],
+    userReviews: [
+      { id: 'r9', user: 'MusicLover', rating: 5, comment: 'Best noise cancelling on the market.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=music' }
+    ]
   },
   {
     id: '8',
@@ -151,7 +213,16 @@ export const products: Product[] = [
       'Mechanical channel selectors',
       'High-fidelity built-in speakers'
     ],
-    colors: ['#8B4513', '#A52A2A']
+    colors: ['#8B4513', '#A52A2A'],
+    specifications: [
+      { label: 'Resolution', value: '4K Ultra HD' },
+      { label: 'Panel Type', value: 'OLED' },
+      { label: 'Frame', value: 'Solid Walnut' },
+      { label: 'OS', value: 'Smart TV OS' }
+    ],
+    userReviews: [
+      { id: 'r10', user: 'RetroFan', rating: 5, comment: 'A piece of art that actually works!', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=retro' }
+    ]
   },
   {
     id: '9',
@@ -169,7 +240,15 @@ export const products: Product[] = [
       'Rechargeable via USB-C',
       'Ergonomic curved design'
     ],
-    colors: ['#000000']
+    colors: ['#000000'],
+    specifications: [
+      { label: 'Connection', value: 'Bluetooth 5.0' },
+      { label: 'Charging', value: 'USB-C' },
+      { label: 'Range', value: '15 Metres' }
+    ],
+    userReviews: [
+      { id: 'r11', user: 'User99', rating: 4, comment: 'Very responsive, though slightly small.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=user99' }
+    ]
   },
   {
     id: '10',
@@ -189,6 +268,15 @@ export const products: Product[] = [
       'Ultra-silent operation (19dB)',
       'Multiple air purification filters'
     ],
-    colors: ['#FFFFFF', '#F5F5F0']
+    colors: ['#FFFFFF', '#F5F5F0'],
+    specifications: [
+      { label: 'Capacity', value: '12000 BTU' },
+      { label: 'Energy Class', value: 'A+++' },
+      { label: 'Noise Level', value: '19 dB' },
+      { label: 'Control', value: 'App / Voice / Remote' }
+    ],
+    userReviews: [
+      { id: 'r12', user: 'CoolingMaster', rating: 5, comment: 'So quiet I forget it is even on.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=cool' }
+    ]
   }
 ];

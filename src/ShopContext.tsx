@@ -9,11 +9,17 @@ interface ShopContextType {
   searchQuery: string;
   selectedCategory: Category;
   selectedBrands: string[];
+  selectedRating: number | null;
+  selectedColors: string[];
   priceRange: [number, number];
+  isCartOpen: boolean;
+  setIsCartOpen: (open: boolean) => void;
   
   setSearchQuery: (query: string) => void;
   setSelectedCategory: (cat: Category) => void;
   setSelectedBrands: (brands: string[]) => void;
+  setSelectedRating: (rating: number | null) => void;
+  setSelectedColors: (colors: string[]) => void;
   setPriceRange: (range: [number, number]) => void;
   
   addToCart: (product: Product) => void;
@@ -35,7 +41,10 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All items');
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 2000]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const products = initialProducts;
 
@@ -45,17 +54,21 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
                           product.brand.toLowerCase().includes(searchQuery.toLowerCase());
       
       const matchesCategory = selectedCategory === 'All items' || 
-                             (selectedCategory === 'Favorites' && favorites.includes(product.id)) ||
                              (selectedCategory === 'Sale' && product.oldPrice) ||
                              product.category === selectedCategory;
       
       const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
       
       const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
+
+      const matchesRating = !selectedRating || product.rating >= selectedRating;
+
+      const matchesColors = selectedColors.length === 0 || 
+                           product.colors.some(color => selectedColors.includes(color));
       
-      return matchesSearch && matchesCategory && matchesBrand && matchesPrice;
+      return matchesSearch && matchesCategory && matchesBrand && matchesPrice && matchesRating && matchesColors;
     });
-  }, [searchQuery, selectedCategory, selectedBrands, priceRange, favorites]);
+  }, [searchQuery, selectedCategory, selectedBrands, priceRange, selectedRating, selectedColors]);
 
   const addToCart = (product: Product) => {
     setCart(prev => {
@@ -65,6 +78,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       return [...prev, { ...product, quantity: 1 }];
     });
+    setIsCartOpen(true);
   };
 
   const removeFromCart = (productId: string) => {
@@ -95,8 +109,9 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   return (
     <ShopContext.Provider value={{
-      products, cart, favorites, searchQuery, selectedCategory, selectedBrands, priceRange,
-      setSearchQuery, setSelectedCategory, setSelectedBrands, setPriceRange,
+      products, cart, favorites, searchQuery, selectedCategory, selectedBrands, selectedRating, selectedColors, priceRange,
+      isCartOpen, setIsCartOpen,
+      setSearchQuery, setSelectedCategory, setSelectedBrands, setSelectedRating, setSelectedColors, setPriceRange,
       addToCart, removeFromCart, updateQuantity, clearCart,
       toggleFavorite, isFavorite,
       filteredProducts

@@ -15,66 +15,31 @@ export default function ProductList({ onProductClick }: ProductListProps) {
   const { filteredProducts, selectedCategory, setSelectedCategory, searchQuery } = useShop();
 
   return (
-    <div className="flex gap-12 max-w-[1400px] mx-auto px-6 py-8">
+    <div className="flex gap-12 max-w-[1400px] mx-auto px-6 py-8 relative items-start">
       <Sidebar />
 
       <main className="flex-1 min-w-0">
         <div className="mb-12">
-          <div className="flex items-center gap-2 text-xs font-medium text-white/40 mb-6 font-mono tracking-tighter">
-            <span>HQ</span>
-            <span className="opacity-20">/</span>
-            <span className="text-neon/60 uppercase">{selectedCategory}</span>
-            {searchQuery && (
-              <>
-                <span className="opacity-20">/</span>
-                <span className="text-white/60">"{searchQuery}"</span>
-              </>
-            )}
-          </div>
-
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div className="space-y-2">
-              <h1 className="text-6xl font-bold tracking-tighter font-tech uppercase">
-                {selectedCategory === 'Favorites' ? (
-                  <span className="flex items-center gap-4">
-                    Favorites <Heart className="text-red-500 fill-red-500" size={40} />
-                  </span>
-                ) : selectedCategory === 'Sale' ? (
-                  "Flash Sale"
-                ) : searchQuery ? (
-                  "Search Results"
-                ) : (
-                  "Trending"
-                )}
-              </h1>
-              <p className="text-white/40 font-medium max-w-md">
-                {selectedCategory === 'Favorites' 
-                  ? "Access your curated selection of high-performance gear."
-                  : "Discover the pinnacle of consumer electronics and industrial design."}
-              </p>
-            </div>
-            
-            <div className="flex items-center gap-8 border-b border-white/5 pb-1 overflow-x-auto no-scrollbar">
-              <nav className="flex items-center gap-6 whitespace-nowrap">
-                {CATEGORIES.map(cat => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`text-xs font-bold uppercase tracking-widest pb-4 transition-all relative ${
-                      selectedCategory === cat ? 'text-neon' : 'text-white/30 hover:text-white'
-                    }`}
-                  >
-                    {cat}
-                    {selectedCategory === cat && (
-                      <motion.div 
-                        layoutId="activeCategory"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-neon shadow-[0_0_10px_rgba(0,255,102,0.5)]"
-                      />
-                    )}
-                  </button>
-                ))}
-              </nav>
-            </div>
+          <div className="border-b border-white/5 mb-12 overflow-x-auto no-scrollbar">
+            <nav className="flex items-center gap-8 whitespace-nowrap">
+              {['All items', 'Smartphones', 'Kitchen', 'Game Console', 'TV & Video', 'Home Comfort'].map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat as any)}
+                  className={`text-xs font-bold uppercase tracking-widest pb-4 transition-all relative ${
+                    selectedCategory === cat ? 'text-neon' : 'text-white/30 hover:text-white'
+                  }`}
+                >
+                  {cat}
+                  {selectedCategory === cat && (
+                    <motion.div 
+                      layoutId="activeCategory"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-neon shadow-[0_0_10px_rgba(0,255,102,0.5)]"
+                    />
+                  )}
+                </button>
+              ))}
+            </nav>
           </div>
 
           {filteredProducts.length > 0 ? (
