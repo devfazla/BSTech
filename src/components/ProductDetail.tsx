@@ -14,11 +14,13 @@ export default function ProductDetail({ product, onBack, onProductClick }: Produ
   const { toggleFavorite, isFavorite, addToCart } = useShop();
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [mainImage, setMainImage] = useState(product.image);
+  const [visibleReviews, setVisibleReviews] = useState(6);
 
   // Reset state when product changes to fix switching bug
   useEffect(() => {
     setSelectedColor(product.colors[0]);
     setMainImage(product.image);
+    setVisibleReviews(6);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [product.id]);
 
@@ -217,7 +219,7 @@ export default function ProductDetail({ product, onBack, onProductClick }: Produ
         </section>
 
         {/* User Reviews */}
-        <section className="space-y-16">
+        <section id="reviews" className="space-y-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-10">
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-neon">
@@ -226,23 +228,52 @@ export default function ProductDetail({ product, onBack, onProductClick }: Produ
               </div>
               <h2 className="text-5xl font-bold font-tech tracking-tighter uppercase">User Feedback Loop</h2>
             </div>
-            <div className="flex items-center">
-              <div className="text-right">
-                <div className="text-6xl font-bold font-tech text-neon leading-none">{product.rating}</div>
-                <div className="text-[10px] font-black text-white/20 uppercase tracking-[0.2em] mt-2">Aggregate Index</div>
+            <div className="flex items-center gap-12">
+              <div className="flex flex-col items-center">
+                <div className="text-7xl font-bold font-tech text-neon leading-none">{product.rating}</div>
+                <div className="flex gap-1 mt-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={14} className={i < Math.floor(product.rating) ? 'fill-neon text-neon' : 'text-white/10'} />
+                  ))}
+                </div>
+                <div className="text-[10px] font-black text-white/20 uppercase tracking-[0.2em] mt-3">Aggregate Index</div>
+              </div>
+              
+              <div className="hidden sm:flex flex-col gap-2 min-w-[200px]">
+                {[5, 4, 3, 2, 1].map((star) => {
+                  const count = product.userReviews.filter(r => r.rating === star).length;
+                  const percentage = product.userReviews.length > 0 ? (count / product.userReviews.length) * 100 : 0;
+                  return (
+                    <div key={star} className="flex items-center gap-3">
+                      <span className="text-[10px] font-bold text-white/20 w-4">{star}</span>
+                      <div className="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${percentage}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, ease: 'easeOut' }}
+                          className="h-full bg-neon/40"
+                        />
+                      </div>
+                      <span className="text-[10px] font-mono text-white/20 w-8 text-right">{count}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {product.userReviews.map((review) => (
-              <motion.div 
-                key={review.id}
-                whileHover={{ y: -5 }}
-                className="p-10 bg-white/[0.02] border border-white/5 rounded-[2rem] space-y-8 flex flex-col justify-between"
-              >
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {product.userReviews.slice(0, visibleReviews).map((review, idx) => (
+                <motion.div 
+                  key={review.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="group relative p-10 bg-white/[0.02] border border-white/5 rounded-[2.5rem] hover:bg-white/[0.04] hover:border-white/10 transition-all flex flex-col h-full"
+                >
+                  <div className="flex items-center justify-between mb-8">
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, idx) => (
                         <Star key={idx} size={12} className={idx < review.rating ? 'fill-neon text-neon' : 'text-white/10'} />
@@ -250,26 +281,57 @@ export default function ProductDetail({ product, onBack, onProductClick }: Produ
                     </div>
                     <span className="text-[10px] font-mono text-white/20 uppercase tracking-widest">{review.date}</span>
                   </div>
-                  <p className="text-lg text-white/70 leading-relaxed font-medium italic">
-                    "{review.comment}"
-                  </p>
-                </div>
-                
-                <div className="flex items-center gap-4 pt-6 border-t border-white/5">
-                  <div className="relative w-12 h-12">
-                    <img src={review.avatar} alt={review.user} className="w-full h-full rounded-2xl object-cover grayscale brightness-125" />
-                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-neon rounded-full border-4 border-dark-bg flex items-center justify-center">
-                      <div className="w-1 h-1 bg-dark-bg rounded-full" />
+                  
+                  <div className="flex-1 space-y-6">
+                    <p className="text-lg text-white/80 leading-relaxed font-medium italic relative">
+                      <span className="absolute -top-4 -left-2 text-4xl text-neon/10 font-serif">"</span>
+                      {review.comment}
+                      <span className="absolute -bottom-6 -right-2 text-4xl text-neon/10 font-serif">"</span>
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center gap-5 mt-12 pt-8 border-t border-white/5">
+                    <div className="relative shrink-0">
+                      <div className="w-14 h-14 rounded-2xl overflow-hidden border border-white/10 bg-dark-bg p-0.5">
+                        <img 
+                          src={review.avatar} 
+                          alt={review.user} 
+                          className="w-full h-full rounded-[0.9rem] object-cover grayscale brightness-125 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" 
+                        />
+                      </div>
+                      <div className="absolute -top-1 -right-1 p-1 bg-neon text-dark-bg rounded-full border-2 border-dark-bg">
+                        <ShieldCheck size={8} strokeWidth={3} />
+                      </div>
+                    </div>
+                    <div className="min-w-0">
+                      <h5 className="text-sm font-bold uppercase tracking-widest text-white group-hover:text-neon transition-colors truncate">
+                        {review.user}
+                      </h5>
+                      <div className="flex items-center gap-2 mt-1">
+                        <div className="w-1 h-1 rounded-full bg-neon animate-pulse" />
+                        <span className="text-[9px] text-white/20 font-mono uppercase tracking-widest truncate">Verified Hardware Specialist</span>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <h5 className="text-sm font-bold uppercase tracking-widest">{review.user}</h5>
-                    <p className="text-[10px] text-white/20 font-mono uppercase tracking-tight">Verified Protocol User</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+
+                  {/* Aesthetic grid overlay */}
+                  <div className="absolute inset-x-12 bottom-0 h-px bg-gradient-to-r from-transparent via-neon/10 to-transparent" />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
+
+          {visibleReviews < product.userReviews.length && (
+            <div className="flex flex-col items-center gap-8 pt-10">
+              <div className="w-px h-24 bg-gradient-to-b from-white/10 to-transparent" />
+              <button 
+                onClick={() => setVisibleReviews(prev => prev + 6)}
+                className="px-12 py-5 border border-white/5 bg-white/[0.02] rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] hover:bg-neon hover:text-dark-bg hover:shadow-[0_0_30px_rgba(0,255,102,0.3)] transition-all"
+              >
+                Initialize More Feedback
+              </button>
+            </div>
+          )}
         </section>
 
         <RelatedProducts currentProduct={product} onProductClick={onProductClick} />

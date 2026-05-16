@@ -12,23 +12,46 @@ export const products: Product[] = [
     reviews: 124,
     image: 'coffee-machine.jpeg',
     badge: 'Sale 15%',
-    description: 'A stylish and compact coffee machine that brings the Italian cafe experience to your home. Featuring the iconic retro design of the 50s.',
+    description: 'A masterpiece of precision engineering and retro aesthetics, the SMEG Coffee Machine is designed to deliver a professional-grade espresso experience within the comfort of your home. Encased in a durable, high-gloss 50s style chassis, this machine combines iconic Italian design with advanced thermoblock technology. Whether you are a dedicated barista or a morning coffee enthusiast, the intuitive interface and adjustable cappuccino system allow for infinite customization of your brew. Its compact footprint belies a powerful internal pump capable of 15-bar pressure, ensuring every extraction is rich, aromatic, and topped with a perfect crema.',
     features: [
-      '15 bar pressure for the perfect espresso',
-      'Stainless steel filter holder',
-      'Adjustable cappuccino system',
-      'Removable water tank (1L)'
+      '15 bar professional pressure for the perfect espresso extraction',
+      'Stainless steel filter holder compatible with ground coffee and E.S.E. pods',
+      'Adjustable Cappuccino System for thick, velvety foam',
+      'Advanced Thermoblock heating system for rapid startup',
+      'Removable 1L water tank with water level indicator',
+      'Passive cup warmer on top of the machine',
+      'Anti-drip system with removable tray'
     ],
     colors: ['#FFFFFF', '#000000', '#FF0000', '#ADD8E6'],
     specifications: [
-      { label: 'Power', value: '1350 W' },
-      { label: 'Voltage', value: '220-240 V' },
-      { label: 'Frequency', value: '50/60 Hz' },
-      { label: 'Dimensions', value: '149 x 330 x 303 mm' }
+      { label: 'Power Input', value: '1350 W' },
+      { label: 'Voltage Range', value: '220-240 V' },
+      { label: 'Heating System', value: 'Thermoblock' },
+      { label: 'Dimensions', value: '149 x 330 x 303 mm' },
+      { label: 'Weight', value: '4.7 kg' },
+      { label: 'Pump Pressure', value: '15 bar' }
     ],
     userReviews: [
-      { id: 'r1', user: 'Marco Rossi', rating: 5, comment: 'Exceptional build quality and the espresso is perfect.', date: '2024-03-12', avatar: 'https://i.pravatar.cc/150?u=marco' },
-      { id: 'r2', user: 'Sarah Jenkins', rating: 5, comment: 'Beautiful addition to my kitchen. Worth every penny.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=sarah' }
+      { id: 'p1r1', user: 'Marco Rossi', rating: 5, comment: 'Exceptional build quality and the espresso is perfect.', date: '2024-03-12', avatar: 'https://i.pravatar.cc/150?u=marco' },
+      { id: 'p1r2', user: 'Sarah Jenkins', rating: 5, comment: 'Beautiful addition to my kitchen. Worth every penny.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=sarah' },
+      { id: 'p1r3', user: 'James Wilson', rating: 5, comment: 'The milk frother is professional grade. I use it every morning.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=james' },
+      { id: 'p1r4', user: 'Elena K.', rating: 4, comment: 'Takes a bit of space but it looks like a design piece.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=elena' },
+      { id: 'p1r5', user: 'David Chen', rating: 5, comment: 'Solid construction, fast heating, and perfect crema.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=david' },
+      { id: 'p1r6', user: 'Sophie M.', rating: 5, comment: 'Incredible machine. Better than my old professional one.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=sophie' },
+      { id: 'p1r7', user: 'Antonio G.', rating: 4, comment: 'Great espresso, but manual frothing needs some practice.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=antonio' },
+      { id: 'p1r8', user: 'Lisa Ray', rating: 5, comment: 'Absolutely stunning in white. Works flawlessly.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=lisa' },
+      { id: 'p1r9', user: 'Brian H.', rating: 5, comment: 'Zero complaints. It is expensive but you get what you pay for.', date: '2024-02-05', avatar: 'https://i.pravatar.cc/150?u=brian' },
+      { id: 'p1r10', user: 'Monica S.', rating: 5, comment: 'Love the retro vibe. Coffee tastes exactly like Italy.', date: '2024-01-30', avatar: 'https://i.pravatar.cc/150?u=monica' },
+      { id: 'p1r11', user: 'Kevin P.', rating: 4, comment: 'Good machine. The water tank is a bit hard to reach if tucked in.', date: '2024-01-25', avatar: 'https://i.pravatar.cc/150?u=kevin' },
+      { id: 'p1r12', user: 'Rachel F.', rating: 5, comment: 'High pressure extraction really makes a difference in flavor.', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=rachel' },
+      { id: 'p1r13', user: 'Tom B.', rating: 5, comment: 'The weight of the machine keeps it stable while locking the handle.', date: '2024-01-15', avatar: 'https://i.pravatar.cc/150?u=tom' },
+      { id: 'p1r14', user: 'Isabella C.', rating: 4, comment: 'Stylish and functional. Heats up in seconds.', date: '2024-01-10', avatar: 'https://i.pravatar.cc/150?u=isabella' },
+      { id: 'p1r15', user: 'Gary V.', rating: 5, comment: 'Definitely the centerpiece of my coffee station.', date: '2024-01-05', avatar: 'https://i.pravatar.cc/150?u=gary' },
+      { id: 'p1r16', user: 'Lucy L.', rating: 5, comment: 'Best espresso at home. The adjustable steam nozzle is a win.', date: '2024-01-01', avatar: 'https://i.pravatar.cc/150?u=lucy' },
+      { id: 'p1r17', user: 'Derek S.', rating: 4, comment: 'Pricey but the quality is undeniable.', date: '2023-12-25', avatar: 'https://i.pravatar.cc/150?u=derek' },
+      { id: 'p1r18', user: 'Nancy W.', rating: 5, comment: 'Perfect gift for any coffee lover.', date: '2023-12-20', avatar: 'https://i.pravatar.cc/150?u=nancy' },
+      { id: 'p1r19', user: 'Peter T.', rating: 5, comment: 'Heavy duty, reliable, and beautiful.', date: '2023-12-15', avatar: 'https://i.pravatar.cc/150?u=peter' },
+      { id: 'p1r20', user: 'Linda M.', rating: 5, comment: 'It changed my morning routine for the better.', date: '2023-12-10', avatar: 'https://i.pravatar.cc/150?u=linda' }
     ]
   },
   {
@@ -40,23 +63,46 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 3502,
     image: 'iphone.jpeg',
-    description: 'The latest iPhone with a desert titanium finish, featuring the advanced A18 Pro chip and a stunning pro camera system.',
+    description: 'Redefine your mobile experience with the iPhone 16 Pro. Featuring a grade-5 titanium frame and advanced micro-blasted finish, it represents the pinnacle of industrial design and processing power. The A18 Pro chip delivers industry-leading speed and efficiency, while the 48MP Pro camera system with a new Camera Control button offers unprecedented creative freedom. With support for 4K 120fps Dolby Vision, you can capture cinematic moments in stunning detail. The 6.3-inch Super Retina XDR display with ProMotion technology ensures every interaction is fluid and responsive, peak brightness now reaches 2000 nits for perfect visibility even in direct sunlight.',
     features: [
-      '6.3-inch Super Retina XDR display',
-      'Advanced Pro camera system',
-      '4K 120 fps Dolby Vision',
-      'A18 Pro chip with 6-core GPU'
+      '6.3-inch ProMotion Super Retina XDR Display',
+      'Grade 5 Titanium enclosure with contoured edges',
+      'A18 Pro chip with 6-core GPU and 16-core Neural Engine',
+      'Pro camera system: 48MP Main, 12MP Telephoto, 12MP Ultra Wide',
+      '4K 120 fps Dolby Vision video recording',
+      'Next-generation Ceramic Shield front',
+      'Action button and new Camera Control interface'
     ],
     colors: ['#4B4B4B', '#F5F5F0', '#C5C5C5', '#3D3D3D'],
     specifications: [
       { label: 'Display', value: '6.3" LTPO Super Retina XDR' },
-      { label: 'Processor', value: 'A18 Pro chip' },
-      { label: 'Camera', value: '48MP Main | 12MP Ultra Wide' },
-      { label: 'Battery', value: 'Up to 27 hours video playback' }
+      { label: 'Processor', value: 'A18 Pro chip (3nm architecture)' },
+      { label: 'Main Camera', value: '48MP Fusion | 2.44μm quad pixel' },
+      { label: 'Storage Options', value: '128GB, 256GB, 512GB, 1TB' },
+      { label: 'Connectivity', value: '5G, Wi-Fi 7, Bluetooth 5.4, USB-C 3.2' },
+      { label: 'Material', value: 'Titanium Grade 5' }
     ],
     userReviews: [
-      { id: 'r3', user: 'TechGuru', rating: 5, comment: 'The camera upgrades are insane. Best phone of the year.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=tech' },
-      { id: 'r4', user: 'Liam O.', rating: 4, comment: 'Great performance, though battery life could be better.', date: '2024-03-14', avatar: 'https://i.pravatar.cc/150?u=liam' }
+      { id: 'p2r1', user: 'TechGuru', rating: 5, comment: 'The camera upgrades are insane. Best phone of the year.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=tech' },
+      { id: 'p2r2', user: 'Liam O.', rating: 4, comment: 'Great performance, though battery life could be more.', date: '2024-03-14', avatar: 'https://i.pravatar.cc/150?u=liam' },
+      { id: 'p2r3', user: 'Samantha J.', rating: 5, comment: 'The titanium finish feels incredible in hand. So light!', date: '2024-03-12', avatar: 'https://i.pravatar.cc/150?u=samantha' },
+      { id: 'p2r4', user: 'Mark Tech', rating: 5, comment: 'A18 Pro is a beast. Gaming at 120fps is buttery smooth.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=mark' },
+      { id: 'p2r5', user: 'Emily R.', rating: 4, comment: 'Excellent screen, but it is quite expensive for the base storage.', date: '2024-03-08', avatar: 'https://i.pravatar.cc/150?u=emily' },
+      { id: 'p2r6', user: 'John Doe', rating: 5, comment: 'Best iPhone ever. The camera control is a game changer.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=john' },
+      { id: 'p2r7', user: 'Sarah S.', rating: 5, comment: 'Incredible detail in photos. Professional grade gear.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=sarah_s' },
+      { id: 'p2r8', user: 'Alex V.', rating: 5, comment: 'FaceID is faster than ever. Very refined experience.', date: '2024-02-28', avatar: 'https://i.pravatar.cc/150?u=alex' },
+      { id: 'p2r9', user: 'PixelFan', rating: 4, comment: 'Switching from Android was easy, iOS is so smooth now.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=pixel' },
+      { id: 'p2r10', user: 'Chris B.', rating: 5, comment: 'The video quality is untouchable. 4K120 is gorgeous.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=chris' },
+      { id: 'p2r11', user: 'Nina L.', rating: 5, comment: 'Stunning display. ProMotion makes everything look better.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=nina' },
+      { id: 'p2r12', user: 'Dave M.', rating: 5, comment: 'Build quality is 10/10. Definitely worth the upgrade.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=dave' },
+      { id: 'p2r13', user: 'Anna K.', rating: 4, comment: 'Slightly bigger screen is nice without feeling bulky.', date: '2024-02-05', avatar: 'https://i.pravatar.cc/150?u=anna' },
+      { id: 'p2r14', user: 'Bob S.', rating: 5, comment: 'Charging speeds are finally decent with USB-C.', date: '2024-01-30', avatar: 'https://i.pravatar.cc/150?u=bob' },
+      { id: 'p2r15', user: 'Alice W.', rating: 5, comment: 'MagSafe is stronger this year. Love the new cases.', date: '2024-01-25', avatar: 'https://i.pravatar.cc/150?u=alice' },
+      { id: 'p2r16', user: 'Fred G.', rating: 4, comment: 'Solid battery for a Pro model. Lasts all day easily.', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=fred' },
+      { id: 'p2r17', user: 'Julia T.', rating: 5, comment: 'The zoom lens is finally where it needs to be.', date: '2024-01-15', avatar: 'https://i.pravatar.cc/150?u=julia' },
+      { id: 'p2r18', user: 'Toby L.', rating: 5, comment: 'The software integration is just perfect.', date: '2024-01-10', avatar: 'https://i.pravatar.cc/150?u=toby' },
+      { id: 'p2r19', user: 'Oscar P.', rating: 5, comment: 'Titanium is the way to go. So premium.', date: '2024-01-05', avatar: 'https://i.pravatar.cc/150?u=oscar' },
+      { id: 'p2r20', user: 'Leo Q.', rating: 5, comment: 'Most powerful computer in my pocket.', date: '2024-01-01', avatar: 'https://i.pravatar.cc/150?u=leo' }
     ]
   },
   {
@@ -68,22 +114,44 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 89,
     image: 'microwave.jpeg',
-    description: 'A powerful and efficient microwave oven with a sleek minimalist design, perfect for modern kitchens.',
+    description: 'Elevate your culinary capabilities with the SMEG Professional Microwave Oven. This high-performance appliance seamlessly blends elegant design with industrial efficiency. Boasting a massive capacity and intelligent cooking algorithms, it handles everything from delicate defrosting to high-intensity roasting. The interior is lined with easy-to-clean ceramic enamel, while the exterior features the signature SMEG aesthetic. With dozens of pre-programmed recipes and a highly responsive control interface, it reduces cooking time while preserving the nutritional value and texture of your hardware—we mean food.',
     features: [
-      '800W microwave power',
-      '5 power levels',
-      'Defrost by time or weight',
-      'Electronic timer'
+      '800W microwave power with 5 adjustable levels',
+      'Large 25 Litre capacity with easy-clean ceramic interior',
+      'Electronic timer with end-of-cooking acoustic alarm',
+      'Advanced defrost algorithm by time or weight',
+      'Child safety lock and auto-ventilation system',
+      'Quartz grill for perfect browning and texture'
     ],
     colors: ['#000000', '#808080', '#FFFFFF'],
     specifications: [
-      { label: 'Type', value: 'Compact Microwave' },
-      { label: 'Capacity', value: '25 Litres' },
-      { label: 'Control', value: 'Electronic' },
-      { label: 'Material', value: 'Sheet metal' }
+      { label: 'Microwave Power', value: '800 W' },
+      { label: 'Grill Power', value: '1000 W' },
+      { label: 'Total Capacity', value: '25 Litres' },
+      { label: 'Control System', value: 'Electronic Touch' },
+      { label: 'Voltage', value: '230 V' }
     ],
     userReviews: [
-      { id: 'r5', user: 'Emily White', rating: 5, comment: 'Looks amazing and heats food very evenly.', date: '2024-02-28', avatar: 'https://i.pravatar.cc/150?u=emily' }
+      { id: 'p3r1', user: 'Emily White', rating: 5, comment: 'Looks amazing and heats food very evenly. A kitchen essential.', date: '2024-02-28', avatar: 'https://i.pravatar.cc/150?u=emily' },
+      { id: 'p3r2', user: 'Mark S.', rating: 4, comment: 'Powerful and quiet. Does exactly what it should with style.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=mark' },
+      { id: 'p3r3', user: 'Anna B.', rating: 5, comment: 'The defrost setting is actually smart. No more cooked edges.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=anna' },
+      { id: 'p3r4', user: 'Chef_Luca', rating: 5, comment: 'Best microwave I have ever used in a home setting.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=luca' },
+      { id: 'p3r5', user: 'Sarah G.', rating: 5, comment: 'Matches my other SMEG appliances perfectly. Solid build.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=sarah' },
+      { id: 'p3r6', user: 'James T.', rating: 4, comment: 'Compact but fits large plates. Very efficient.', date: '2024-02-05', avatar: 'https://i.pravatar.cc/150?u=james' },
+      { id: 'p3r7', user: 'Elena P.', rating: 5, comment: 'Design is 10/10. Functional and beautiful.', date: '2024-01-30', avatar: 'https://i.pravatar.cc/150?u=elena' },
+      { id: 'p3r8', user: 'Kevin M.', rating: 5, comment: 'Heats extremely fast. Love the quick start button.', date: '2024-01-25', avatar: 'https://i.pravatar.cc/150?u=kevin' },
+      { id: 'p3r9', user: 'Lisa K.', rating: 4, comment: 'Good oven, though the beep is a bit loud.', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=lisa' },
+      { id: 'p3r10', user: 'Tom R.', rating: 5, comment: 'Reliable SMEG quality. Worth the premium price.', date: '2024-01-15', avatar: 'https://i.pravatar.cc/150?u=tom' },
+      { id: 'p3r11', user: 'Nina S.', rating: 5, comment: 'The grill feature is surprisingly good for pizzas.', date: '2024-01-10', avatar: 'https://i.pravatar.cc/150?u=nina' },
+      { id: 'p3r12', user: 'Paul V.', rating: 5, comment: 'Super easy to clean the interior. Very much appreciated.', date: '2024-01-05', avatar: 'https://i.pravatar.cc/150?u=paul' },
+      { id: 'p3r13', user: 'Maria L.', rating: 4, comment: 'Great looking unit. Very straightforward to use.', date: '2024-01-01', avatar: 'https://i.pravatar.cc/150?u=maria' },
+      { id: 'p3r14', user: 'Dan C.', rating: 5, comment: 'Perfect addition to a modern kitchen setup.', date: '2023-12-25', avatar: 'https://i.pravatar.cc/150?u=dan' },
+      { id: 'p3r15', user: 'Zoe H.', rating: 5, comment: 'Best microwave I have owned. Consistency is key.', date: '2023-12-20', avatar: 'https://i.pravatar.cc/150?u=zoe' },
+      { id: 'p3r16', user: 'Frank B.', rating: 4, comment: 'Good power management, avoids cold spots.', date: '2023-12-15', avatar: 'https://i.pravatar.cc/150?u=frank' },
+      { id: 'p3r17', user: 'Sophie K.', rating: 5, comment: 'Absolutely beautiful. Makes reheating feels fancy.', date: '2023-12-10', avatar: 'https://i.pravatar.cc/150?u=sophie' },
+      { id: 'p3r18', user: 'Rick J.', rating: 5, comment: 'Strong build, feels like it will last a decade.', date: '2023-12-05', avatar: 'https://i.pravatar.cc/150?u=rick' },
+      { id: 'p3r19', user: 'Janet T.', rating: 5, comment: 'Very intuitive controls. My kids can use it easily.', date: '2023-12-01', avatar: 'https://i.pravatar.cc/150?u=janet' },
+      { id: 'p3r20', user: 'Will F.', rating: 5, comment: 'Exceptional design meets exceptional power.', date: '2023-11-25', avatar: 'https://i.pravatar.cc/150?u=will' }
     ]
   },
   {
@@ -97,22 +165,45 @@ export const products: Product[] = [
     image: 'earbuds-main.jpeg',
     images: ['earbuds-main.jpeg', 'earbuds-2.jpeg'],
     badge: 'Trending',
-    description: 'With Bose Immersive Audio — breakthrough spatialised audio makes your music feel more real — no matter the content or streaming source.',
+    description: 'Immerse yourself in a sonic landscape unlike any other with the Bose QuietComfort Ultra. Boasting breakthrough spatialized audio technology, these earbuds create a concert-hall experience within your ear canal, making every track feel more three-dimensional and realistic. Our world-class noise cancellation monitors external frequencies millions of times per second to provide a sanctuary of silence wherever you are. With CustomTune technology, the audio profile is automatically calibrated to the unique shape of your ears, ensuring every note is delivered with surgical precision. The ultra-comfortable design allows for all-day wear, while the advanced microphone array ensures your voice is isolated and crystal clear during comms—or just regular phone calls.',
     features: [
-      'World-class noise cancelling',
-      'Breakthrough spatialised audio',
-      'Up to 6-hours or 24 hours total with case',
-      'CustomTune technology for personalised sound'
+      'World-class noise cancelling for total immersion',
+      'Bose Immersive Audio spatializes sound for realism',
+      'CustomTune technology personalizes sound to your ears',
+      'Up to 6 hours battery or 24 hours with the Smart Case',
+      'Advanced microphone array isolates voice from noise',
+      'IPX4 water-resistant build for active lifestyles'
     ],
     colors: ['#2E4A7D', '#FFFFFF', '#D4FF00', '#3D3D3D', '#F5F5DC'],
     specifications: [
-      { label: 'Wireless Range', value: 'Up to 30 ft (9 m)' },
-      { label: 'Bluetooth Version', value: '5.3' },
-      { label: 'Battery Life', value: 'Up to 6 hours' },
-      { label: 'Charging Case', value: 'USB-C / Wireless' }
+      { label: 'Noise Cancellation', value: 'World-Class ANC' },
+      { label: 'Audio Technology', value: 'Bose Immersive Audio' },
+      { label: 'Bluetooth Codecs', value: 'SBC, AAC, aptX Adaptive' },
+      { label: 'Total Playtime', value: 'Up to 24 Hours' },
+      { label: 'Charge Type', value: 'USB-C & Wireless' },
+      { label: 'Sensors', value: 'Touch Control, Play/Pause Detection' }
     ],
     userReviews: [
-      { id: 'r6', user: 'AudiophileX', rating: 4, comment: 'ANC is second to none. Soundstage is impressive.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=audio' }
+      { id: 'p4r1', user: 'AudiophileX', rating: 4, comment: 'ANC is second to none. Soundstage is impressive.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=audio' },
+      { id: 'p4r2', user: 'SoundExpert', rating: 5, comment: 'Spatial audio is not a gimmick. It actually sounds wide.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=expert' },
+      { id: 'p4r3', user: 'Jane D.', rating: 5, comment: 'Most comfortable earbuds I have ever owned. I sleep in them.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=jane' },
+      { id: 'p4r4', user: 'Mark R.', rating: 5, comment: 'The CustomTune really makes a difference. Bass is tight.', date: '2024-03-12', avatar: 'https://i.pravatar.cc/150?u=mark' },
+      { id: 'p4r5', user: 'Sarah L.', rating: 4, comment: 'Great battery life. Case is a bit bulky but worth it.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=sarah' },
+      { id: 'p4r6', user: 'Chris V.', rating: 5, comment: 'Silence is beautiful. These earbuds proved it.', date: '2024-03-18', avatar: 'https://i.pravatar.cc/150?u=chris' },
+      { id: 'p4r7', user: 'Alex M.', rating: 5, comment: 'Mic quality is top-notch. Use them for meetings daily.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=alex' },
+      { id: 'p4r8', user: 'Emily S.', rating: 5, comment: 'Love the blue color. Very distinctive and premium.', date: '2024-03-22', avatar: 'https://i.pravatar.cc/150?u=emily' },
+      { id: 'p4r9', user: 'Toby G.', rating: 4, comment: 'Multipoint connection works flawlessly now.', date: '2024-03-24', avatar: 'https://i.pravatar.cc/150?u=toby' },
+      { id: 'p4r10', user: 'Liam W.', rating: 5, comment: 'Worth every dollar for the frequent traveler.', date: '2024-03-26', avatar: 'https://i.pravatar.cc/150?u=liam' },
+      { id: 'p4r11', user: 'Nina F.', rating: 5, comment: 'Software updates fixed the early bugs. Pure bliss now.', date: '2024-03-28', avatar: 'https://i.pravatar.cc/150?u=nina' },
+      { id: 'p4r12', user: 'Paul R.', rating: 5, comment: 'I have tried Sony and Sennheiser, these win on ANC.', date: '2024-03-30', avatar: 'https://i.pravatar.cc/150?u=paul' },
+      { id: 'p4r13', user: 'Maria T.', rating: 4, comment: 'Transparent mode is the most natural I have heard.', date: '2024-04-01', avatar: 'https://i.pravatar.cc/150?u=maria' },
+      { id: 'p4r14', user: 'Dan B.', rating: 5, comment: 'Best purchase of 2024. Noise cancellation is 11/10.', date: '2024-04-03', avatar: 'https://i.pravatar.cc/150?u=dan' },
+      { id: 'p4r15', user: 'Zoe P.', rating: 5, comment: 'Fast charging is a life saver. 15 mins for 2 hours.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=zoe' },
+      { id: 'p4r16', user: 'Frank K.', rating: 5, comment: 'The app is intuitive and useful for EQ settings.', date: '2024-04-07', avatar: 'https://i.pravatar.cc/150?u=frank' },
+      { id: 'p4r17', user: 'Sophie G.', rating: 4, comment: 'Premium feel throughout. Bose at its best.', date: '2024-04-09', avatar: 'https://i.pravatar.cc/150?u=sophie' },
+      { id: 'p4r18', user: 'Rick D.', rating: 5, comment: 'Finally, spatial audio that doesnt sound metallic.', date: '2024-04-11', avatar: 'https://i.pravatar.cc/150?u=rick' },
+      { id: 'p4r19', user: 'Janet H.', rating: 5, comment: 'Stability is great. They dont fall out during runs.', date: '2024-04-13', avatar: 'https://i.pravatar.cc/150?u=janet' },
+      { id: 'p4r20', user: 'Will E.', rating: 5, comment: 'Ultra by name, Ultra by nature. Exceptional gear.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=will' }
     ]
   },
   {
@@ -126,21 +217,45 @@ export const products: Product[] = [
     reviews: 215,
     image: 'kettle.jpeg',
     badge: 'Sale 10%',
-    description: 'Experience pure elegance and efficiency with the 50s-style retro electric kettle.',
+    description: 'Elegance and engineering collide in the SMEG 50s Retro Style Electric Kettle. More than just a kitchen appliance, this kettle is a statement piece that brings a touch of mid-century Italian sophistication to your morning routine. The high-quality stainless steel body is finished in a range of vibrant colors, ensuring it becomes the focal point of your counter. With a generous 1.7-liter capacity, it can rapidly boil enough water for seven cups, while the integrated stainless steel limescale filter ensures every pour is pure. Safety is paramount with an automatic shut-off at 100°C and a soft-opening lid that prevents hot steam from escaping too quickly. It is reliable, fast, and undeniably beautiful.',
     features: [
-      '1.7 litre capacity',
-      'Stainless steel body',
-      'Auto shut-off at 100°C',
-      'Soft-opening lid'
+      'Large 1.7 Litre / 7 Cup capacity',
+      'Polished stainless steel body with retro finish',
+      'Safety auto shut-off at 100°C and without water',
+      'Soft-opening lid for controlled steam release',
+      'Removable, washable stainless steel limescale filter',
+      '360° swivel base with built-in cord wrap'
     ],
     colors: ['#000000', '#FF0000', '#F5F5DC'],
     specifications: [
-      { label: 'Dimensions', value: '248 x 226 x 171 mm' },
-      { label: 'Body material', value: 'Stainless steel' },
-      { label: 'Internal volume', value: '1.7 Litres' }
+      { label: 'Body Material', value: 'Stainless Steel' },
+      { label: 'Capacity', value: '1.7 Litres' },
+      { label: 'Safety', value: 'Auto-Shutoff' },
+      { label: 'Voltage', value: '220-240 V' },
+      { label: 'Frequency', value: '50/60 Hz' },
+      { label: 'Dimensions', value: '248 x 226 x 171 mm' }
     ],
     userReviews: [
-      { id: 'r7', user: 'Jane Smith', rating: 5, comment: 'Heats up fast and looks beautiful on my counter.', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=jane' }
+      { id: 'p5r1', user: 'Jane Smith', rating: 5, comment: 'Heats up fast and looks beautiful on my counter.', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=jane' },
+      { id: 'p5r2', user: 'Marco V.', rating: 5, comment: 'SMEG never fails on design. Pure class.', date: '2024-01-25', avatar: 'https://i.pravatar.cc/150?u=marco_v' },
+      { id: 'p5r3', user: 'Sarah W.', rating: 4, comment: 'Very consistent and surprisingly quiet for its power.', date: '2024-02-01', avatar: 'https://i.pravatar.cc/150?u=sarah_w' },
+      { id: 'p5r4', user: 'Tom H.', rating: 5, comment: 'The soft-open lid is a great safety feature. No more steam burns.', date: '2024-02-05', avatar: 'https://i.pravatar.cc/150?u=tom_h' },
+      { id: 'p5r5', user: 'Elena M.', rating: 5, comment: 'Centerpiece of my coffee station. Love the aesthetics.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=elena_m' },
+      { id: 'p5r6', user: 'Kevin L.', rating: 5, comment: 'Boils full tank in under 3 minutes. Impressive.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=kevin_l' },
+      { id: 'p5r7', user: 'Lisa B.', rating: 4, comment: 'Excellent filter, water tastes very clean.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=lisa_b' },
+      { id: 'p5r8', user: 'Brian J.', rating: 5, comment: 'The build quality is substantial. Worth the investment.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=brian_j' },
+      { id: 'p5r9', user: 'Monica G.', rating: 5, comment: 'A joy to use every morning. Elegant design.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=monica_g' },
+      { id: 'p5r10', user: 'Peter F.', rating: 5, comment: 'Compact enough but holds plenty. Perfect balance.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=peter_f' },
+      { id: 'p5r11', user: 'Nina D.', rating: 5, comment: 'The red is so deep and glossy. Beautifully finished.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=nina_d' },
+      { id: 'p5r12', user: 'Paul K.', rating: 5, comment: 'Reliable and fast. Typical SMEG excellence.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=paul_k' },
+      { id: 'p5r13', user: 'Rachel S.', rating: 4, comment: 'The handle is ergonomic and stays cool.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=rachel_s' },
+      { id: 'p5r14', user: 'Dan T.', rating: 5, comment: 'Solid feel, not like cheap plastic kettles.', date: '2024-03-25', avatar: 'https://i.pravatar.cc/150?u=dan_t' },
+      { id: 'p5r15', user: 'Zoe V.', rating: 5, comment: 'Worth the extra cost for the years of use I will get.', date: '2024-04-01', avatar: 'https://i.pravatar.cc/150?u=zoe_v' },
+      { id: 'p5r16', user: 'Frank R.', rating: 5, comment: 'Fastest boil of any kettle I have ever owned.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=frank_r' },
+      { id: 'p5r17', user: 'Sophie B.', rating: 5, comment: 'I smile every time I wake up and use this.', date: '2024-04-10', avatar: 'https://i.pravatar.cc/150?u=sophie_b' },
+      { id: 'p5r18', user: 'Rick M.', rating: 4, comment: 'High quality throughout. Typical SMEG excellence.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=rick_m' },
+      { id: 'p5r19', user: 'Janet K.', rating: 5, comment: 'Elegant, functional, and very reliable.', date: '2024-04-20', avatar: 'https://i.pravatar.cc/150?u=janet_k' },
+      { id: 'p5r20', user: 'Will S.', rating: 5, comment: 'The best kettle on the market. Top marks.', date: '2024-04-25', avatar: 'https://i.pravatar.cc/150?u=will_s' }
     ]
   },
   {
@@ -154,21 +269,44 @@ export const products: Product[] = [
     reviews: 56,
     image: 'steamer.jpeg',
     badge: 'Sale 15%',
-    description: 'Professional-grade hair dryer with ion technology for smooth, shiny results every time.',
+    description: 'The REMEZ Professional Hair Dryer is not just a grooming tool; it is a laboratory for capillary health. Developed in collaboration with top stylists and trichologists, this dryer utilizes advanced positive and negative ion technology to seal the hair cuticle, locking in moisture while eliminating static and frizz. The high-speed digital motor operates at 110,000 RPM, producing a concentrated air stream that dries hair up to 50% faster than traditional models. With precise temperature control that monitors air heat 40 times per second, it prevents extreme heat damage to protect your natural shine. The ergonomic, ultra-lightweight design reduces wrist fatigue, making it perfect for both professional salon use and the discerning home user.',
     features: [
-      'Powerful 2200W motor',
-      'Negative ion technology',
-      '3 heat and 2 speed settings',
-      'Cool shot button'
+      'Industrial-grade 2200W digital motor (110,000 RPM)',
+      'Intelligent heat control monitors air temp 40x per second',
+      'Advanced dual-ion technology for smooth, shiny results',
+      '3 precise speed settings and 4 heat settings (including constant cool)',
+      'Magnetic attachments for 360° rotation and easy fitting',
+      'Lightweight ergonomic balanced design (only 450g)'
     ],
     colors: ['#3D3C3A', '#808080'],
     specifications: [
-      { label: 'Motor speed', value: '110,000 RPM' },
+      { label: 'Motor Speed', value: '110,000 RPM' },
       { label: 'Cord Length', value: '3 Metres' },
-      { label: 'Weight', value: '450g' }
+      { label: 'Weight', value: '450g' },
+      { label: 'Voltage', value: '220-240 V' },
+      { label: 'Power', value: '2200 W' }
     ],
     userReviews: [
-      { id: 'r8', user: 'Stylist88', rating: 4, comment: 'Very light and dries hair in half the time.', date: '2024-01-15', avatar: 'https://i.pravatar.cc/150?u=stylist' }
+      { id: 'p6r1', user: 'Stylist88', rating: 4, comment: 'Very light and dries hair in half the time. A pro must-have.', date: '2024-01-15', avatar: 'https://i.pravatar.cc/150?u=stylist' },
+      { id: 'p6r2', user: 'Kelly R.', rating: 5, comment: 'Changed my morning routine. No more frizz!', date: '2024-01-20', avatar: 'https://i.pravatar.cc/150?u=kelly' },
+      { id: 'p6r3', user: 'Mark The Barber', rating: 5, comment: 'The magnetic attachments are so satisfying and robust.', date: '2024-01-25', avatar: 'https://i.pravatar.cc/150?u=mark_b' },
+      { id: 'p6r4', user: 'Sarah W.', rating: 5, comment: 'Shiny hair every time. Worth every penny.', date: '2024-01-30', avatar: 'https://i.pravatar.cc/150?u=sarah_w' },
+      { id: 'p6r5', user: 'John L.', rating: 4, comment: 'Powerful air flow, slightly loud on max but fast.', date: '2024-02-05', avatar: 'https://i.pravatar.cc/150?u=john_l' },
+      { id: 'p6r6', user: 'Emily P.', rating: 5, comment: 'Lightest dryer I have ever used. My wrists thank me.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=emily_p' },
+      { id: 'p6r7', user: 'Rachel G.', rating: 5, comment: 'The cool shot is actually cold. Perfect for setting.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=rachel_g' },
+      { id: 'p6r8', user: 'Toby H.', rating: 5, comment: 'High quality build. Feels like it will last years.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=toby_h' },
+      { id: 'p6r9', user: 'Lisa S.', rating: 5, comment: 'The diffusers are perfect for my curls. Zero frizz.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=lisa_s' },
+      { id: 'p6r10', user: 'Brian D.', rating: 4, comment: 'Fastest drying time I have experienced.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=brian_d' },
+      { id: 'p6r11', user: 'Monica F.', rating: 5, comment: 'A luxury experience in my own bathroom.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=monica_f' },
+      { id: 'p6r12', user: 'Paul W.', rating: 5, comment: 'Precision engineering at its best. Great tool.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=paul_w' },
+      { id: 'p6r13', user: 'Nina K.', rating: 5, comment: 'Highly recommend for anyone with thick hair.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=nina_k' },
+      { id: 'p6r14', user: 'Dan B.', rating: 4, comment: 'Solid cord length, very useful in the salon.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=dan_b' },
+      { id: 'p6r15', user: 'Zoe M.', rating: 5, comment: 'The ionic tech really makes a visible difference.', date: '2024-03-25', avatar: 'https://i.pravatar.cc/150?u=zoe_m' },
+      { id: 'p6r16', user: 'Frank L.', rating: 5, comment: 'Worth the investment for the time saved.', date: '2024-04-01', avatar: 'https://i.pravatar.cc/150?u=frank_l' },
+      { id: 'p6r17', user: 'Sophie T.', rating: 5, comment: 'Beauty meets performance. Excellent design.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=sophie_t' },
+      { id: 'p6r18', user: 'Rick G.', rating: 4, comment: 'Consistent heat, very reliable over time.', date: '2024-04-10', avatar: 'https://i.pravatar.cc/150?u=rick_g' },
+      { id: 'p6r19', user: 'Janet R.', rating: 5, comment: 'The best hair dryer I have ever owned. Period.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=janet_r' },
+      { id: 'p6r20', user: 'Will H.', rating: 5, comment: 'Top tier hardware. Remez got it right.', date: '2024-04-20', avatar: 'https://i.pravatar.cc/150?u=will_h' }
     ]
   },
   {
@@ -180,21 +318,45 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 842,
     image: 'headphones.jpeg',
-    description: 'High-fidelity audio meets industry-leading noise cancellation for an unparalleled listening experience.',
+    description: 'Experience audio nirvana with the Bose Wireless Headphones. These headphones are the culmination of decades of research into psychoacoustics and hardware optimization. The signature active noise cancellation (ANC) blocks out the chaotic world, allowing your music to breathe in a vacuum of pure fidelity. Equipped with high-definition dynamic drivers, they deliver a balanced sound signature with deep, resonant bass and shimmering highs. Multi-point Bluetooth connectivity allows you to switch between secondary inputs seamlessly, while the 30-hour battery life ensures your soundtrack never skips a beat during long-haul traversals. The plush protein leather ear cushions and lightweight headband provide a "disappearing" fit, making them the ultimate tool for both focused work and leisure.',
     features: [
-      'Customizable EQ',
-      'Multi-point connection',
-      'Up to 30 hours battery life',
-      'Fast charging'
+      'Industry-leading active noise cancellation',
+      'Hi-Res Audio with high-definition dynamic drivers',
+      'Multi-point connectivity for two devices simultaneously',
+      'Up to 30 hours of battery life with fast charge (10 min = 3 hrs)',
+      'Adjustable EQ through the Bose Music app',
+      'Crystal clear calls with four-microphone system'
     ],
     colors: ['#000000', '#FFFFFF', '#808080'],
     specifications: [
-      { label: 'Driver Type', value: 'Dynamic' },
-      { label: 'Noise Cancelling', value: 'Active' },
-      { label: 'Battery Life', value: '30 Hours' }
+      { label: 'Driver Type', value: 'High-Res Dynamic' },
+      { label: 'Noise Cancelling', value: 'Full Active ANC' },
+      { label: 'Battery Life', value: '30 Hours' },
+      { label: 'Charge Time', value: '2 Hours' },
+      { label: 'Bluetooth', value: 'Version 5.2' },
+      { label: 'Weight', value: '250g' }
     ],
     userReviews: [
-      { id: 'r9', user: 'MusicLover', rating: 5, comment: 'Best noise cancelling on the market.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=music' }
+      { id: 'p7r1', user: 'MusicLover', rating: 5, comment: 'Best noise cancelling on the market. Better than the rest.', date: '2024-02-10', avatar: 'https://i.pravatar.cc/150?u=music' },
+      { id: 'p7r2', user: 'Audiophile_Dan', rating: 5, comment: 'Balanced sound, very natural. Soundstage is wide.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=dan_a' },
+      { id: 'p7r3', user: 'FrequentFlyer', rating: 5, comment: 'Airplane noise completely disappears. Life saver.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=flyer' },
+      { id: 'p7r4', user: 'Sarah K.', rating: 5, comment: 'So comfortable I forget I am wearing them after 6 hours.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=sarah_k' },
+      { id: 'p7r5', user: 'TechAddict', rating: 4, comment: 'Multipoint is a game changer for switching from laptop to phone.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=tech' },
+      { id: 'p7r6', user: 'Chris M.', rating: 5, comment: 'The app is actually useful for the EQ tuning.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=chris_m' },
+      { id: 'p7r7', user: 'Elena V.', rating: 5, comment: 'Matte black finish is so sleek. Premium feel.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=elena_v' },
+      { id: 'p7r8', user: 'Kevin J.', rating: 5, comment: 'Reliable bluetooth connection, never drops out.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=kevin_j' },
+      { id: 'p7r9', user: 'Lisa P.', rating: 4, comment: 'Battery life is exactly as advertised. Fast charging is great.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=lisa_p' },
+      { id: 'p7r10', user: 'Brian G.', rating: 5, comment: 'Best money spent on audio this year.', date: '2024-03-25', avatar: 'https://i.pravatar.cc/150?u=brian_g' },
+      { id: 'p7r11', user: 'Monica L.', rating: 5, comment: 'Calls are crystal clear even in windy conditions.', date: '2024-03-30', avatar: 'https://i.pravatar.cc/150?u=monica_l' },
+      { id: 'p7r12', user: 'Paul S.', rating: 5, comment: 'Highly refined sound signatures. Bose quality.', date: '2024-04-01', avatar: 'https://i.pravatar.cc/150?u=paul_s' },
+      { id: 'p7r13', user: 'Nina B.', rating: 5, comment: 'Compact case, fits easily in my backpack.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=nina_b' },
+      { id: 'p7r14', user: 'Dan R.', rating: 4, comment: 'Comfortable earcups, no sweating even in summer.', date: '2024-04-10', avatar: 'https://i.pravatar.cc/150?u=dan_r' },
+      { id: 'p7r15', user: 'Zoe K.', rating: 5, comment: 'The ANC levels are adjustable, very useful feature.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=zoe_k' },
+      { id: 'p7r16', user: 'Frank T.', rating: 5, comment: 'Pure audio bliss. I can hear every instrument detail.', date: '2024-04-20', avatar: 'https://i.pravatar.cc/150?u=frank_t' },
+      { id: 'p7r17', user: 'Sophie D.', rating: 5, comment: 'Beautifully crafted. Feel very sturdy.', date: '2024-04-25', avatar: 'https://i.pravatar.cc/150?u=sophie_d' },
+      { id: 'p7r18', user: 'Rick S.', rating: 5, comment: 'The voice prompts are helpful and not annoying.', date: '2024-05-01', avatar: 'https://i.pravatar.cc/150?u=rick_s' },
+      { id: 'p7r19', user: 'Janet L.', rating: 5, comment: 'The best headphones for focus in open offices.', date: '2024-05-05', avatar: 'https://i.pravatar.cc/150?u=janet_l' },
+      { id: 'p7r20', user: 'Will P.', rating: 5, comment: '10/10 would buy again. Worth every penny.', date: '2024-05-10', avatar: 'https://i.pravatar.cc/150?u=will_p' }
     ]
   },
   {
@@ -206,22 +368,45 @@ export const products: Product[] = [
     rating: 5.0,
     reviews: 42,
     image: 'tv.png',
-    description: 'A masterpiece of design combining 70s aesthetics with modern 4K technology. Encased in genuine walnut wood.',
+    description: 'The Vintage Master TV is a high-tech homage to the golden age of television. Encounter a centerpiece that marries the warm, tactile aesthetics of the 1970s with the bleeding-edge clarity of modern 4K OLED technology. The chassis is handcrafted from genuine walnut wood, selected for its unique grain and durability. Behind the retro facade lies a powerhouse of processing, delivering infinite contrast ratios and a wider color gamut thanks to self-lit pixel technology. The physical channel selectors provide a satisfying haptic feedback that software just cannot replicate, while the integrated high-fidelity sound system delivers room-filling audio that eliminates the need for external soundbars. It is not just a TV; it is an heirloom of the digital age.',
     features: [
-      'Genuine walnut wooden frame',
-      '4K Ultra HD resolution',
-      'Mechanical channel selectors',
-      'High-fidelity built-in speakers'
+      'Handcrafted genuine walnut wood enclosure',
+      '4K Ultra HD OLED panel with infinite contrast',
+      'Mechanical haptic channel and volume selectors',
+      'Smart TV OS with support for all modern streaming protocols',
+      'Integrated high-fidelity wooden-enclosure speakers',
+      'Custom retro-themed UI skin for a unified aesthetic'
     ],
     colors: ['#8B4513', '#A52A2A'],
     specifications: [
-      { label: 'Resolution', value: '4K Ultra HD' },
-      { label: 'Panel Type', value: 'OLED' },
-      { label: 'Frame', value: 'Solid Walnut' },
-      { label: 'OS', value: 'Smart TV OS' }
+      { label: 'Resolution', value: '4K Ultra HD OLED' },
+      { label: 'Refresh Rate', value: '120 Hz' },
+      { label: 'Enclosure Material', value: 'Solid Walnut Wood' },
+      { label: 'Smart Engine', value: 'Vintage-Core AI' },
+      { label: 'Connectivity', value: 'HDMI 2.1, Wi-Fi 6, Optical' },
+      { label: 'Sound Output', value: '60W High-Fidelity' }
     ],
     userReviews: [
-      { id: 'r10', user: 'RetroFan', rating: 5, comment: 'A piece of art that actually works!', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=retro' }
+      { id: 'p8r1', user: 'RetroFan', rating: 5, comment: 'A piece of art that actually works! The wood is gorgeous.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=retro' },
+      { id: 'p8r2', user: 'ModernCollector', rating: 5, comment: 'The contrast of the OLED inside the wood frame is stunning.', date: '2024-03-08', avatar: 'https://i.pravatar.cc/150?u=collector' },
+      { id: 'p8r3', user: 'TimelessDesign', rating: 5, comment: 'Everyone who visits my home asks about this TV.', date: '2024-03-12', avatar: 'https://i.pravatar.cc/150?u=timeless' },
+      { id: 'p8r4', user: 'HardwareLover', rating: 4, comment: 'Mechanical selectors are so fun to use. Sound is deep.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=hwlover' },
+      { id: 'p8r5', user: 'CinemaBuff', rating: 5, comment: 'Black levels are perfect. Best TV I have ever seen.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=buff' },
+      { id: 'p8r6', user: 'WoodWorker', rating: 5, comment: 'The walnut finish is impeccable. Truly high-end craft.', date: '2024-03-25', avatar: 'https://i.pravatar.cc/150?u=worker' },
+      { id: 'p8r7', user: 'VintageTech', rating: 5, comment: 'The UI is so well designed to match the retro vibe.', date: '2024-04-01', avatar: 'https://i.pravatar.cc/150?u=vttech' },
+      { id: 'p8r8', user: 'Sarah L.', rating: 5, comment: 'Its like a furniture piece that happens to be an amazing TV.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=sarah_l' },
+      { id: 'p8r9', user: 'Marco D.', rating: 4, comment: 'Great sound, no need for my old soundbar anymore.', date: '2024-04-10', avatar: 'https://i.pravatar.cc/150?u=marco_d' },
+      { id: 'p8r10', user: 'Kevin P.', rating: 5, comment: 'Streaming apps run very smoothly. Top notch processor.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=kevin_p' },
+      { id: 'p8r11', user: 'Lisa V.', rating: 5, comment: 'Unparalleled aesthetic. I never want to go back to plastic.', date: '2024-04-20', avatar: 'https://i.pravatar.cc/150?u=lisa_v' },
+      { id: 'p8r12', user: 'Brian M.', rating: 5, comment: 'The build quality is evident from the first touch.', date: '2024-04-25', avatar: 'https://i.pravatar.cc/150?u=brian_m' },
+      { id: 'p8r13', user: 'Monica H.', rating: 4, comment: 'Quite heavy, but that expected with real wood.', date: '2024-05-01', avatar: 'https://i.pravatar.cc/150?u=monica_h' },
+      { id: 'p8r14', user: 'Paul J.', rating: 5, comment: 'Pure luxury. Worth every penny of the price tag.', date: '2024-05-05', avatar: 'https://i.pravatar.cc/150?u=paul_j' },
+      { id: 'p8r15', user: 'Nina S.', rating: 5, comment: 'Simply the most beautiful piece of tech in my house.', date: '2024-05-08', avatar: 'https://i.pravatar.cc/150?u=nina_s' },
+      { id: 'p8r16', user: 'Dan W.', rating: 5, comment: 'Immersive experience. OLED + Walnut is a win.', date: '2024-05-10', avatar: 'https://i.pravatar.cc/150?u=dan_w' },
+      { id: 'p8r17', user: 'Zoe R.', rating: 5, comment: 'Exceptional details. The mechanical dials are life.', date: '2024-05-11', avatar: 'https://i.pravatar.cc/150?u=zoe_r' },
+      { id: 'p8r18', user: 'Frank B.', rating: 4, comment: 'Software is very responsive. No lag at all.', date: '2024-05-12', avatar: 'https://i.pravatar.cc/150?u=frank_b' },
+      { id: 'p8r19', user: 'Sophie K.', rating: 5, comment: 'Best picture quality I have ever experienced at home.', date: '2024-05-13', avatar: 'https://i.pravatar.cc/150?u=sophie_k' },
+      { id: 'p8r20', user: 'Will M.', rating: 5, comment: 'Traditional craftsmanship meets modern technology effortlessly.', date: '2024-05-14', avatar: 'https://i.pravatar.cc/150?u=will_m' }
     ]
   },
   {
@@ -233,21 +418,45 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 1205,
     image: 'remote.png',
-    description: 'The ultimate minimalist control experience. Universal compatibility with ultra-low latency.',
+    description: 'Master your multi-input environment with the BSTECH Precision Remote. This is not your typical universal remote; it is a high-performance interface device designed for professional home automation setups. Featuring a ultra-low latency Bluetooth 5.0 chipset and a multi-touch trackpad, it provides a level of control precision normally reserved for high-end computing. The minimalist, ergonomic design is carved from a single block of high-density polymer, providing a substantial hand-feel and extreme durability. With support for over 500,000 devices via cloud-based signal matrices, it eliminates the need for multiple controllers, acting as the centralized brain for your entire hardware ecosystem.',
     features: [
-      'Touch-sensitive trackpad',
-      'Bluetooth 5.0 connectivity',
-      'Rechargeable via USB-C',
-      'Ergonomic curved design'
+      'Touch-sensitive precision trackpad for fluid navigation',
+      'Universal compatibility with 500k+ devices via cloud sync',
+      'Ultra-low latency Bluetooth 5.0 and IR hybrid transmission',
+      'Ergonomic high-density chassis with weighted balance',
+      'Rechargeable via USB-C (3 months battery on single charge)',
+      'Customizable haptic feedback and programmable macro buttons'
     ],
     colors: ['#000000'],
     specifications: [
-      { label: 'Connection', value: 'Bluetooth 5.0' },
-      { label: 'Charging', value: 'USB-C' },
-      { label: 'Range', value: '15 Metres' }
+      { label: 'Latency', value: '< 2ms over Bluetooth' },
+      { label: 'Transmission', value: 'Bluetooth 5.0 + IR' },
+      { label: 'Charging Type', value: 'USB-C Fast Charging' },
+      { label: 'Battery Life', value: 'Up to 90 Days' },
+      { label: 'Range', value: '15 Metres' },
+      { label: 'Buttons', value: 'Programmable Haptic' }
     ],
     userReviews: [
-      { id: 'r11', user: 'User99', rating: 4, comment: 'Very responsive, though slightly small.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=user99' }
+      { id: 'p9r1', user: 'User99', rating: 4, comment: 'Very responsive, though slightly small for large hands.', date: '2024-02-15', avatar: 'https://i.pravatar.cc/150?u=user99' },
+      { id: 'p9r2', user: 'TechMaster', rating: 5, comment: 'The trackpad is a game changer for navigating menus.', date: '2024-02-20', avatar: 'https://i.pravatar.cc/150?u=techm' },
+      { id: 'p9r3', user: 'Sarah G.', rating: 5, comment: 'Finally, one remote that actually controls everything.', date: '2024-02-25', avatar: 'https://i.pravatar.cc/150?u=sarah_g' },
+      { id: 'p9r4', user: 'Kevin J.', rating: 5, comment: 'The build quality is insane. Feels like a luxury tool.', date: '2024-03-01', avatar: 'https://i.pravatar.cc/150?u=kevin_j' },
+      { id: 'p9r5', user: 'Lisa M.', rating: 4, comment: 'Setup was a bit complex but the results are perfect.', date: '2024-03-05', avatar: 'https://i.pravatar.cc/150?u=lisa_m' },
+      { id: 'p9r6', user: 'James R.', rating: 5, comment: 'Battery life is incredible. I rarely charge it.', date: '2024-03-10', avatar: 'https://i.pravatar.cc/150?u=james_r' },
+      { id: 'p9r7', user: 'Elena P.', rating: 5, comment: 'Minimalist design fits perfectly in my living room.', date: '2024-03-15', avatar: 'https://i.pravatar.cc/150?u=elena_p' },
+      { id: 'p9r8', user: 'Brian D.', rating: 5, comment: 'Tactile buttons feel very high end. Response is instant.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=brian_d' },
+      { id: 'p9r9', user: 'Monica S.', rating: 5, comment: 'The haptic feedback is subtle but helpful.', date: '2024-03-25', avatar: 'https://i.pravatar.cc/150?u=monica_s' },
+      { id: 'p9r10', user: 'Paul W.', rating: 5, comment: 'Universal remote done right. High performance.', date: '2024-03-30', avatar: 'https://i.pravatar.cc/150?u=paul_w' },
+      { id: 'p9r11', user: 'Nina K.', rating: 5, comment: 'Works perfectly with my vintage and modern gear.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=nina_k' },
+      { id: 'p9r12', user: 'Dan B.', rating: 4, comment: 'Solid range, works even from the next room.', date: '2024-04-10', avatar: 'https://i.pravatar.cc/150?u=dan_b' },
+      { id: 'p9r13', user: 'Zoe M.', rating: 5, comment: 'Programming macros is easy and very useful.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=zoe_m' },
+      { id: 'p9r14', user: 'Frank L.', rating: 5, comment: 'Best universal remote on the market. Top tier.', date: '2024-04-20', avatar: 'https://i.pravatar.cc/150?u=frank_l' },
+      { id: 'p9r15', user: 'Sophie T.', rating: 5, comment: 'Elegant, functional, and very reliable.', date: '2024-04-25', avatar: 'https://i.pravatar.cc/150?u=sophie_t' },
+      { id: 'p9r16', user: 'Rick G.', rating: 5, comment: 'USB-C charging is so much better than AA batteries.', date: '2024-05-01', avatar: 'https://i.pravatar.cc/150?u=rick_g' },
+      { id: 'p9r17', user: 'Janet R.', rating: 5, comment: 'Interface is clean and easy to understand.', date: '2024-05-05', avatar: 'https://i.pravatar.cc/150?u=janet_r' },
+      { id: 'p9r18', user: 'Will H.', rating: 4, comment: 'Responsive and sleek. A premium experience.', date: '2024-05-10', avatar: 'https://i.pravatar.cc/150?u=will_h' },
+      { id: 'p9r19', user: 'Chris B.', rating: 5, comment: 'Indispensable tool for my home cinema room.', date: '2024-05-12', avatar: 'https://i.pravatar.cc/150?u=chris_b' },
+      { id: 'p9r20', user: 'Emily K.', rating: 5, comment: 'Typical BSTECH quality. Precision in every press.', date: '2024-05-13', avatar: 'https://i.pravatar.cc/150?u=emily_k' }
     ]
   },
   {
@@ -261,22 +470,45 @@ export const products: Product[] = [
     image: 'ac.png',
     images: ['ac.png', 'ac2.jpeg', 'ac3.jpeg'],
     badge: 'Trending',
-    description: 'Ultra-quiet, energy-efficient smart air conditioner with AI-powered temperature regulation.',
+    description: 'The BSTECH Smart Air Conditioner is a cornerstone of intelligent climate control. Engineered for maximum thermal efficiency, this unit utilizes a dual-inverter compressor that operates with surgical precision, maintaining your desired temperature while consuming up to 70% less energy than standard models. The integrated AI engine monitors ambient conditions and occupancy patterns, automatically adjusting airflow and intensity for optimal comfort. Our flagship "Ultra-Silent" mode reduces operating noise to a mere 19dB—virtually imperceptible to the human ear. Advanced five-stage filtration removes 99.9% of airborne particulates and volatile organic compounds, ensuring your environment is not only cool but pristine. Full integration with our mobile matrix allows for remote deployment and scheduling, giving you total control over your atmosphere from anywhere.',
     features: [
-      'Dual inverter compressor',
-      'Wi-Fi enabled with app control',
-      'Ultra-silent operation (19dB)',
-      'Multiple air purification filters'
+      'Dual Inverter Compressor with energy-efficient AI control',
+      'Ultra-Silent mode operating at a near-whisper 19dB',
+      '5-Stage Air Purification with HEPA and Carbon filters',
+      'Wi-Fi enabled with full app and voice command support',
+      'Omnidirectional 4-way swing for uniform airflow distribution',
+      'Intelligent dehumidification and self-cleaning function'
     ],
     colors: ['#FFFFFF', '#F5F5F0'],
     specifications: [
-      { label: 'Capacity', value: '12000 BTU' },
-      { label: 'Energy Class', value: 'A+++' },
-      { label: 'Noise Level', value: '19 dB' },
-      { label: 'Control', value: 'App / Voice / Remote' }
+      { label: 'BTU Rating', value: '12000 BTU' },
+      { label: 'Energy SEER', value: '25.0 A+++' },
+      { label: 'Noise Operation', value: '19 - 38 dB' },
+      { label: 'Filter Type', value: 'HEPA + Carbon + Silver Ion' },
+      { label: 'Connectivity', value: 'Wi-Fi / App / Alexa / Google' },
+      { label: 'Dimensions', value: '837 x 308 x 189 mm' }
     ],
     userReviews: [
-      { id: 'r12', user: 'CoolingMaster', rating: 5, comment: 'So quiet I forget it is even on.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=cool' }
+      { id: 'p10r1', user: 'CoolingMaster', rating: 5, comment: 'So quiet I forget it is even on. Best AC ever.', date: '2024-03-20', avatar: 'https://i.pravatar.cc/150?u=cool' },
+      { id: 'p10r2', user: 'EnergySaver', rating: 5, comment: 'My electricity bill dropped significantly. Highly efficient.', date: '2024-03-25', avatar: 'https://i.pravatar.cc/150?u=energy' },
+      { id: 'p10r3', user: 'TechGiant', rating: 5, comment: 'App integration is flawless. I turn it on from work.', date: '2024-04-01', avatar: 'https://i.pravatar.cc/150?u=giant' },
+      { id: 'p10r4', user: 'Sarah L.', rating: 5, comment: 'Air feels much fresher. The filter really works.', date: '2024-04-05', avatar: 'https://i.pravatar.cc/150?u=sarah_l' },
+      { id: 'p10r5', user: 'Mark D.', rating: 4, comment: 'Cool down time is very fast. Powerful unit.', date: '2024-04-10', avatar: 'https://i.pravatar.cc/150?u=mark_d' },
+      { id: 'p10r6', user: 'Elena V.', rating: 5, comment: 'Matches my white wall perfectly. Very sleek.', date: '2024-04-15', avatar: 'https://i.pravatar.cc/150?u=elena_v' },
+      { id: 'p10r7', user: 'Kevin J.', rating: 5, comment: 'Quiet, powerful, and smart. Everything you need.', date: '2024-04-20', avatar: 'https://i.pravatar.cc/150?u=kevin_j' },
+      { id: 'p10r8', user: 'Lisa P.', rating: 5, comment: 'Best feature is the remote control via smartphone.', date: '2024-04-25', avatar: 'https://i.pravatar.cc/150?u=lisa_p' },
+      { id: 'p10r9', user: 'Brian G.', rating: 4, comment: 'Installation was quick. Unit is very reliable.', date: '2024-05-01', avatar: 'https://i.pravatar.cc/150?u=brian_g' },
+      { id: 'p10r10', user: 'Monica L.', rating: 5, comment: 'No more allergic reactions since I installed this.', date: '2024-05-05', avatar: 'https://i.pravatar.cc/150?u=monica_l' },
+      { id: 'p10r11', user: 'Paul S.', rating: 5, comment: 'Highly recommended for light sleepers.', date: '2024-05-10', avatar: 'https://i.pravatar.cc/150?u=paul_s' },
+      { id: 'p10r12', user: 'Nina B.', rating: 5, comment: 'Performance is top-tier. BSTECH is the best.', date: '2024-05-12', avatar: 'https://i.pravatar.cc/150?u=nina_b' },
+      { id: 'p10r13', user: 'Dan R.', rating: 5, comment: 'Uniform cooling across the entire room.', date: '2024-05-13', avatar: 'https://i.pravatar.cc/150?u=dan_r' },
+      { id: 'p10r14', user: 'Zoe K.', rating: 5, comment: 'The AI mode actually makes smart decisions.', date: '2024-05-14', avatar: 'https://i.pravatar.cc/150?u=zoe_k' },
+      { id: 'p10r15', user: 'Frank T.', rating: 5, comment: 'Silent and effective. Perfect for my studio.', date: '2024-05-15', avatar: 'https://i.pravatar.cc/150?u=frank_t' },
+      { id: 'p10r16', user: 'Sophie D.', rating: 5, comment: 'The air swing is gentle and not disruptive.', date: '2024-05-16', avatar: 'https://i.pravatar.cc/150?u=sophie_d' },
+      { id: 'p10r17', user: 'Rick S.', rating: 5, comment: 'Best AC unit I have ever purchased.', date: '2024-05-17', avatar: 'https://i.pravatar.cc/150?u=rick_s' },
+      { id: 'p10r18', user: 'Janet L.', rating: 4, comment: 'Dehumidifier mode is very useful in summer.', date: '2024-05-18', avatar: 'https://i.pravatar.cc/150?u=janet_l' },
+      { id: 'p10r19', user: 'Will P.', rating: 5, comment: 'Premium build and premium performance.', date: '2024-05-19', avatar: 'https://i.pravatar.cc/150?u=will_p' },
+      { id: 'p10r20', user: 'Chris V.', rating: 5, comment: 'The silent operation is truly incredible.', date: '2024-05-20', avatar: 'https://i.pravatar.cc/150?u=chris_v' }
     ]
   }
 ];
