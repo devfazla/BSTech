@@ -26,19 +26,29 @@ export default function Header({ onOpenCart, onOpenWishlist }: HeaderProps) {
 
         {/* Global Search */}
         <div className="flex-1 max-w-md relative">
-          <div className="relative group">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-neon transition-colors" size={18} />
-            <input
-              type="text"
-              placeholder="Search gadgets..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-neon/50 focus:bg-white/10 transition-all"
-            />
+          <div className="flex items-center gap-2">
+            <div className="relative group flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-neon transition-colors" size={18} />
+              <input
+                type="text"
+                placeholder="Search gadgets..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-white/5 border border-white/10 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-neon/50 focus:bg-white/10 transition-all"
+              />
+            </div>
+            
+            {/* Mobile Filter Button */}
+            <button 
+              onClick={() => (window as any).BSTechOpenFilters?.()}
+              className="xl:hidden p-2.5 bg-white/5 border border-white/10 rounded-full text-white/40 hover:text-neon hover:border-neon/30 transition-all"
+            >
+              <Menu size={18} />
+            </button>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 md:gap-6 shrink-0">
+        <div className="hidden md:flex items-center gap-2 md:gap-6 shrink-0">
           <button 
             onClick={onOpenWishlist}
             className="relative p-2 text-white/60 hover:text-red-500 transition-colors"
@@ -64,7 +74,15 @@ export default function Header({ onOpenCart, onOpenWishlist }: HeaderProps) {
             )}
           </button>
           
-          <button className="flex items-center gap-2 p-2 text-white/60 hover:text-white transition-colors">
+          <button 
+            onClick={() => {
+              // Trigger navigation to coming soon if needed, or we handle via props
+              // But Header currently doesn't have a direct 'onNavigate' prop.
+              // We'll update the component signature if needed.
+              (window as any).BSTechNavigate?.('coming-soon');
+            }}
+            className="flex items-center gap-2 p-2 text-white/60 hover:text-white transition-colors"
+          >
             <User size={22} />
             <span className="hidden md:block text-sm font-medium">Log in</span>
           </button>

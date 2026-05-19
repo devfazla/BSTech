@@ -67,7 +67,7 @@ BSTech is a sleek, ultra-modern electronics e-commerce platform. It features a h
 The project is pre-configured for **GitHub Pages**. 
 
 1. The `.github/workflows/deploy.yml` handles automated deployment on every push to the `main` branch.
-2. The custom domain **bstech.devmn.site** is configured via the `public/CNAME` file.
+2. The custom domain **bstech.devfazla.com** is configured via the `public/CNAME` file.
 3. `vite.config.ts` uses `base: '/'` which is required for custom root-level domains.
 
 ## 📄 License

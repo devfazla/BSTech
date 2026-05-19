@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import Header from './components/Header';
@@ -8,13 +8,26 @@ import Wishlist from './components/Wishlist';
 import NotFound from './components/NotFound';
 import CartDrawer from './components/CartDrawer';
 import CheckoutSuccessDialog from './components/CheckoutSuccessDialog';
+import ComingSoon from './components/ComingSoon';
+import BottomNav from './components/BottomNav';
+import FilterModal from './components/FilterModal';
 import { useShop } from './ShopContext';
 
 export default function App() {
   const { products, isCartOpen, setIsCartOpen } = useShop();
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
-  const [showWishlist, setShowWishlist] = useState(false);
+  const [activeView, setActiveView] = useState<'home' | 'wishlist' | 'coming-soon'>('home');
   const [checkoutData, setCheckoutData] = useState<any>(null);
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+
+  // Global navigation handler for desktop/mobile consistency
+  useEffect(() => {
+    (window as any).BSTechNavigate = (view: 'home' | 'wishlist' | 'coming-soon') => {
+      setActiveView(view);
+      setSelectedProductId(null);
+    };
+    (window as any).BSTechOpenFilters = () => setIsFilterModalOpen(true);
+  }, []);
 
   const selectedProduct = useMemo(() => 
     selectedProductId ? products.find(p => p.id === selectedProductId) : null, 
@@ -23,14 +36,19 @@ export default function App() {
 
   const handleProductClick = (id: string) => {
     setSelectedProductId(id);
-    setShowWishlist(false);
+    setActiveView('home');
+  };
+
+  const handleViewChange = (view: 'home' | 'wishlist' | 'coming-soon') => {
+    setActiveView(view);
+    setSelectedProductId(null);
   };
 
   return (
     <div id="app-root" className="min-h-screen bg-dark-bg text-white selection:bg-neon selection:text-dark-bg">
       <Header 
         onOpenCart={() => setIsCartOpen(true)} 
-        onOpenWishlist={() => { setShowWishlist(true); setSelectedProductId(null); }} 
+        onOpenWishlist={() => handleViewChange('wishlist')} 
       />
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} onCheckoutSuccess={setCheckoutData} />
       
@@ -39,13 +57,28 @@ export default function App() {
         onClose={() => setCheckoutData(null)}
         orderData={checkoutData}
       />
+
+      <FilterModal 
+        isOpen={isFilterModalOpen} 
+        onClose={() => setIsFilterModalOpen(false)} 
+      />
       
-      <main className="pt-20">
+      <main className="pt-20 pb-32 md:pb-0">
         <AnimatePresence mode="wait">
-          {showWishlist ? (
+          {activeView === 'coming-soon' ? (
+            <motion.div
+              key="coming-soon"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ComingSoon onBack={() => setActiveView('home')} />
+            </motion.div>
+          ) : activeView === 'wishlist' ? (
             <Wishlist 
               key="wishlist"
-              onBack={() => setShowWishlist(false)} 
+              onBack={() => setActiveView('home')} 
               onProductClick={handleProductClick}
             />
           ) : selectedProductId ? (
@@ -89,6 +122,12 @@ export default function App() {
         </AnimatePresence>
       </main>
 
+      <BottomNav 
+        activeView={activeView}
+        onNavigate={handleViewChange}
+        onOpenCart={() => setIsCartOpen(true)}
+      />
+
       <footer className="w-full bg-white/[0.01] border-t border-white/5 pt-32 pb-20 mt-32 relative overflow-hidden">
         {/* Aesthetic background elements */}
         <div className="absolute top-0 left-1/4 w-px h-full bg-white/5 -z-10" />
@@ -119,8 +158,8 @@ export default function App() {
             <div className="space-y-6">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-neon">Navigation</h4>
               <ul className="space-y-4">
-                <li><button onClick={() => { setShowWishlist(false); setSelectedProductId(null); }} className="text-sm text-white/40 hover:text-white hover:translate-x-1 transition-all">Catalog</button></li>
-                <li><button onClick={() => setShowWishlist(true)} className="text-sm text-white/40 hover:text-white hover:translate-x-1 transition-all">Archive</button></li>
+                <li><button onClick={() => handleViewChange('home')} className="text-sm text-white/40 hover:text-white hover:translate-x-1 transition-all">Catalog</button></li>
+                <li><button onClick={() => handleViewChange('wishlist')} className="text-sm text-white/40 hover:text-white hover:translate-x-1 transition-all">Archive</button></li>
                 <li><a href="#" className="text-sm text-white/40 hover:text-white hover:translate-x-1 transition-all block">Showcase</a></li>
               </ul>
             </div>
